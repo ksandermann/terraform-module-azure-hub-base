@@ -10,6 +10,6 @@ output "dependency_environment" {
   value = var.environment
 }
 
-output "dependency_ocation_main" {
+output "dependency_location_main" {
   value = azurerm_resource_group.main.location
 }
