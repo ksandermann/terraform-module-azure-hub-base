@@ -1,0 +1,1 @@
+# terraform-module-azure-hub-base
