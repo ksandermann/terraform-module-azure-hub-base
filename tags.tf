@@ -14,12 +14,16 @@ locals {
   tags_subenv_gateway_generic         = merge(local.tags_module_generic, module.naming-hub.tags_subenv["gateway"])
   tags_subenv_shared_services_generic = merge(local.tags_module_generic, module.naming-hub.tags_subenv["shared_services"])
   tags_subenv_dmz_generic             = merge(local.tags_module_generic, module.naming-hub.tags_subenv["dmz"])
+  tags_subenv_firewall_generic        = merge(local.tags_module_generic, module.naming-hub.tags_subenv["firewall"])
+
 
   #RGS
   tags_resource_group_main            = local.tags_subenv_main_generic
   tags_resource_group_gateway         = local.tags_subenv_gateway_generic
   tags_resource_group_shared_services = local.tags_subenv_shared_services_generic
   tags_resource_group_dmz             = local.tags_subenv_dmz_generic
+  tags_resource_group_firewall        = local.tags_subenv_firewall_generic
+
 
   #DPP
   tags_ddos_protection_plan_main = local.tags_subenv_main_generic

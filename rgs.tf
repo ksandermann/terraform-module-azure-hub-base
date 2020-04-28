@@ -20,4 +20,10 @@ resource "azurerm_resource_group" "dmz" {
   tags     = local.tags_resource_group_dmz
 }
 
+resource "azurerm_resource_group" "firewall" {
+  name     = module.naming-hub.resource_group_names["firewall"]
+  location = var.location_main
+  tags     = local.tags_resource_group_firewall
+}
+
 
